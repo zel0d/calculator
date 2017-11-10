@@ -30,7 +30,11 @@
 .result {
   font-size: 4em;
   font-weight: bold;
-  max-width: 320px;
+  flex: 0 0 auto;
+  text-align: left;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 100%;
 }
 
 .calculation {
@@ -38,7 +42,6 @@
   font-size: 1.8em;
   font-weight: bold;
   text-align: right;
-  max-width: 300px;
 }
 
 /***********************

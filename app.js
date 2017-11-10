@@ -1,11 +1,26 @@
 var calculation = document.getElementsByClassName("calculation")[0];
 var result = document.getElementsByClassName("result")[0];
+var container = document.getElementsByClassName("container")[0];
+
+
+var containerWidth = container.offsetWidth;
+
+result.style.fontSize = "400%";
 
 var math = function( input ){
 
   if (input === "c"){
     calculation.innerHTML = "0";
     result.innerHTML = "0";
+    return;
+  }
+  if (input == "del"){
+    if (calculation.innerHTML.length >1){
+      calculation.innerHTML = calculation.innerHTML.substring(0, calculation.innerHTML.length - 1);
+    } else {
+      calculation.innerHTML = 0;
+    }
+    calculate();
     return;
   }
 
@@ -22,6 +37,10 @@ var math = function( input ){
 
 var calculate = function(){
   result.innerHTML = eval(calculation.innerHTML);
+  var fontSize = parseInt(result.style.fontSize);
+  var resultWidth = result.offsetWidth;
+  result.style.fontSize = fontSize - resultWidth/containerWidth*20 + "%";
+
 };
 
 var addToCalculation = function(input){
