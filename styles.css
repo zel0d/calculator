@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+  font-family: "muli";
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+    color: #ffffff;
+    background: #ff9500;
+}
+
+.container {
+  height: 100vh;
+  margin: auto;
+  padding: 20px;
+  width: 320px;
+}
+
+/***********************
+              Result
+************************/
+.container-result {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.result {
+  font-size: 4em;
+  font-weight: bold;
+  max-width: 320px;
+}
+
+.calculation {
+  color: #6b6b6b;
+  font-size: 1.8em;
+  font-weight: bold;
+  text-align: right;
+  max-width: 300px;
+}
+
+/***********************
+            Buttons
+************************/
+button {
+  background-color: #f1f1f1;
+  border: none;
+  border-radius: 30px;
+  color: #333;
+  font-size: 1.8em;
+  font-weight: bold;
+  height: 60px;
+  margin: 15px;
+  outline: none;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  width: 60px;
+  transition-duration: 0.1s;
+}
+
+button:hover {
+  background-color: #e8e8e8;
+}
+
+button:active {
+  transform-origin: 50% 50%;
+  transform: scale(0.95);
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+.btn-operation {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.btn-operation:hover {
+  background-color: #222222;
+}
+
+.btn-special {
+  background-color: #ff9500;
+  color: #ffffff;
+}
+
+.btn-special:hover {
+  background-color: #ffaa33;
+  color: #ffffff;
+}
